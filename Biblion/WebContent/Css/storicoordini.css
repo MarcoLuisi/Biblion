@@ -1,0 +1,198 @@
+@charset "ISO-8859-1";
+
+body {    
+    margin: 0 !important;
+    padding: 0 !important;
+}
+header{
+	background-color: #98cacb;
+	margin: 0px 0px 0px 0px;
+	height: 108px;
+}
+
+.header_logo_img{float: left;margin-left:10px;  border-radius: 20px;}
+
+.header_menu{float: right; margin: 0; padding: 0;}/*parametrizziamo il menu*/
+.header_menu_search{ position:relative; float: left;  margin-left: 40px; margin-top: 20px;     }
+.header_menu_item{display: inline-block;}/*parametriziamo l'item*/
+.header_menu_item_login {display: inline-block;}/*parametriziamo l'item*/
+.header_menu_item_Carrello{display: inline-block;}
+.header_menu_item a{color: #fff; display: block; padding: 10px; margin-bottom:10px; text-decoration: none;border-radius: 100px;}
+.header_menu_item_login img{display: block; padding: 10px; text-decoration: none; width: 40px; height: 40px; border-radius: 100px; margin-bottom:-25px; margin-right:10px; margin-top:5px;}
+.header_menu_item_Carrello img{display: block; padding: 10px; text-decoration: none; width: 40px; height: 40px; border-radius: 100px; margin-bottom:-25px; margin-right:0px; margin-top:5px;}
+.header_menu_item a:hover{background: rgba(13, 17, 54,0.9);}/*animazione del menu 'sfondo colorato'*/
+.header_menu_item_login img:hover{background: rgba(13, 17, 54,0.9);}/*animazione del menu 'sfondo colorato'*/
+.header_menu_item_Carrello img:hover{background:rgba(13, 17, 54,0.9);}
+.media{display:none;}
+.header_icon-bar{display: block; float: right; padding: 20px; display: none;}/*parametrizziamo 'iconbar'*/
+.header_icon-bar span{display: block; height: 3px; width: 30px; background: #fff; margin-bottom: 5px}/*parametrizziamo il responsive dell'icon-bar*/
+
+
+.box{box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);max-width: 72%;margin-top: 10px;margin-bottom:10px;margin-left:15%;border-radius: 20px;}
+.box_table{padding:10px 20px 10px 20px;}
+.box_text{padding:10px 20px 20px 20px;}
+
+table {font-family: arial, sans-serif;border-collapse: collapse;border: 2px solid black;width:100%;empty-cells: hide;}
+td, th {border: 2px solid black;text-align: left;padding: 8px;}
+th{background-color:#98cacb;}
+
+.button{border: none;height: 30px;width: 200px;background: #322679;color: #fff;font-size: 15px;font-color:grey;border-radius: 20px;}
+.button:hover{background:  #FF9900;cursor: pointer;}
+
+
+
+
+
+
+
+@media (min-width: 480px) {
+
+.std{display:none;}
+.media{display:inline-block;}
+.box{box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);max-width: 98%;min-width:480px;margin-top: 10px;margin-bottom:10px;margin-left:1%;border-radius: 20px;}
+.navbar{min-width:480px;}
+
+}
+
+
+@media (max-width: 930px) {
+
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 24%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*
+	Label the data
+	*/
+	td:nth-of-type(1):before { content: "n° Ordine"; }
+	td:nth-of-type(2):before { content: "Titolo"; }
+	td:nth-of-type(3):before { content: "Quantita"; }
+	td:nth-of-type(4):before { content: "Tipo"; }
+	td:nth-of-type(5):before { content: "Prezzo"; }
+	td:nth-of-type(6):before { content: "DataOrdine"; }
+	td:nth-of-type(7):before { content: "Consegna"; }
+	td:nth-of-type(8):before { content: "Acquirente"; }
+	td:nth-of-type(9):before { content: "Totale"; }
+	
+	
+
+	
+ }
+ 
+ 
+ 
+ 
+ .navbar {
+ margin: 0px 0px -40px 0px;
+  height:47px;
+  background:rgba(13, 17, 54,0.9);
+}
+
+.barra{ 
+
+  
+  background:#fff;
+  width:380px;
+  height:42px;
+  border:none;
+  outline:none;
+  padding:0 25px;
+  border-radius:25px 0 0 25px;
+
+}
+
+.ricercabutton{
+	position:relative;
+	border-radius: 0 25px 25px 0;
+	width:70px;
+ 	 height:42px;
+ 	 border:none;
+ 	 outline:none;
+ 	 cursor:pointer;
+ 	 background:#ffc107;
+ 	 color:fff;
+ 	 left:-5px;
+}
+
+@media(max-width:800px){
+.barra{ 
+  
+  background:#fff;
+  width:320px;
+  height:42px;
+  border:none;
+  outline:none;
+  padding:0 25px;
+  border-radius:25px 0 0 25px;
+
+}
+
+.ricercabutton{
+	position:relative;
+	border-radius: 0 25px 25px 0;
+	width:60px;
+ 	 height:42px;
+ 	 border:none;
+ 	 outline:none;
+ 	 cursor:pointer;
+ 	 background:#ffc107;
+ 	 color:fff;
+ 	 left:-5px;
+}
+}
+
+
+@media (max-width: 710px) {
+ .barra{ 
+
+  background:#fff;
+  width:155px;
+  height:42px;
+  border:none;
+  outline:none;
+  padding:0 25px;
+  border-radius:25px 0 0 25px;
+  
+}
+
+.ricercabutton{
+	position:relative;
+	border-radius: 0 25px 25px 0;
+	width:45px;
+ 	 height:42px;
+ 	 border:none;
+ 	 outline:none;
+ 	 cursor:pointer;
+ 	 background:#ffc107;
+ 	 color:fff;
+ 	 left:-5px;
+}
+}

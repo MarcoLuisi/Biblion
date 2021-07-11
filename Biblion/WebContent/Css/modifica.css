@@ -1,0 +1,166 @@
+@charset "ISO-8859-1";
+
+body {    
+    margin: 0 !important;
+    padding: 0 !important;
+}
+header{
+	background-color: #98cacb;
+	margin: 0px 0px 0px 0px;
+	height: 108px;
+}
+
+.header_logo_img{float: left;margin-left:10px;  border-radius: 20px;}
+
+.header_menu{float: right; margin: 0; padding: 0;}/*parametrizziamo il menu*/
+.header_menu_search{ position:relative; float: left;  margin-left: 40px; margin-top: 20px;     }
+.header_menu_item_login {display: inline-block;padding:10px;margin-right:10px;}/*parametriziamo l'item*/
+.header_menu_item_login a{color: #fff; display: inline-block; text-decoration: none;margin-top:5px; padding:0px 0px 10px 10px;border-radius: 100px;}
+.header_menu_item_login img{display: inline-block; text-decoration: none; width: 40px; height: 40px; margin-bottom:-15px;border-radius: 100px;  }
+.header_menu_item_login img :hover{background: rgba(13, 17, 54,0.9);}/*animazione del menu 'sfondo colorato'*/
+
+table {font-family: arial, sans-serif;border-collapse: collapse;width: auto;border: 2px solid black;}
+td, th {border-radius: 20px;border: 2px solid black;text-align: left;padding: 8px;}
+.x{width: 25px; height: 25px;cursor: pointer;}
+.gear{width: 25px; height: 25px;margin-left:10px;cursor: pointer;}
+.tdx{text-align: center;}
+
+.text_isbn{border-radius: 20px;border: 1px solid black;height: 30px;font-size: 15px;font-color:grey;width: 240px;padding-left:10px;}
+.text_titolo{border-radius: 20px;border: 1px solid black;height: 30px;font-size: 15px;font-color:grey;width: 310px;padding-left:10px;}
+.text_editore{border-radius: 20px;border: 1px solid black;height: 30px;font-size: 15px;font-color:grey;width: 240px;padding-left:10px;}
+.text_annoEdizione{border-radius: 20px;border: 1px solid black;height: 30px;font-size: 15px;font-color:grey;width: 60px;padding-left:10px;}
+.text_gen{border-radius: 20px;border: 1px solid black;height: 30px;font-size: 15px;font-color:grey;width: 240px;padding-left:10px;}
+.text_quantita{border-radius: 20px;border: 1px solid black;height: 30px;font-size: 15px;font-color:grey;width: 60px;padding-left:10px;}
+.text_prezzo{border-radius: 20px;border: 1px solid black;height: 30px;font-size: 15px;font-color:grey;width: 60px;padding-left:10px;}
+.text_pagine{border-radius: 20px;border: 1px solid black;height: 30px;font-size: 15px;font-color:grey;width: 60px;padding-left:10px;}
+.text_autore{border-radius: 20px;border: 1px solid black;height: 30px;font-size: 15px;font-color:grey;width: 240px;padding-left:10px;}
+
+.text_nomeutente{border-radius: 20px;border: 1px solid black;height: 30px;font-size: 15px;font-color:grey;width: 100px;padding-left:10px;}
+
+/*.error{color: red;font-weight:bold;padding:10px;}*/
+
+
+.box{box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);max-width: 70%;margin-top: 10px;margin-bottom:10px;margin-left:15%;border-radius: 20px;}
+input{display:inline-block;}
+.box_conf{padding:15px 20px 20px 20px; }
+
+.button{border: none;height: 30px;width: 68px;background: #322679;color: #fff;font-size: 15px;font-color:grey;border-radius: 20px;}
+.button:hover{background:  #FF9900;cursor: pointer;}
+
+@media (max-width: 1300px) {
+.std{display:none;}
+.media{display:inline-block;}
+.box{box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);max-width: 98%;margin-top: 10px;margin-bottom:10px;margin-left:1%;border-radius: 20px;}
+
+}
+
+@media (max-width: 1110px) {
+.std{display:none;}
+.media{display:inline-block;}
+
+.box{box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);max-width: 98%;margin-top: 10px;margin-bottom:10px;margin-left:1%;border-radius: 20px;}
+}
+
+@media (max-width: 850px) {
+
+.box{box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);max-width: 98%;min-width: 480px;margin-top: 10px;margin-bottom:10px;margin-left:1%;border-radius: 20px;}
+header{background:  #98cacb; min-width: 480px;} /*sfondo dell'header*/
+}
+
+.navbar {
+  margin: 0px 0px 0px 0px;
+  height:47px;
+  background:rgba(13, 17, 54,0.9);
+}
+
+
+.TestoModifica{
+	font-size:19px;
+	font-weight: 700;
+}
+
+
+.barra{ 
+
+  
+  background:#fff;
+  width:380px;
+  height:42px;
+  border:none;
+  outline:none;
+  padding:0 25px;
+  border-radius:25px 0 0 25px;
+
+}
+
+.ricercabutton{
+	position:relative;
+	border-radius: 0 25px 25px 0;
+	width:70px;
+ 	 height:42px;
+ 	 border:none;
+ 	 outline:none;
+ 	 cursor:pointer;
+ 	 background:#ffc107;
+ 	 color:fff;
+ 	 left:-5px;
+}
+
+@media(max-width:800px){
+.barra{ 
+  
+  background:#fff;
+  width:320px;
+  height:42px;
+  border:none;
+  outline:none;
+  padding:0 25px;
+  border-radius:25px 0 0 25px;
+
+}
+
+.ricercabutton{
+	position:relative;
+	border-radius: 0 25px 25px 0;
+	width:60px;
+ 	 height:42px;
+ 	 border:none;
+ 	 outline:none;
+ 	 cursor:pointer;
+ 	 background:#ffc107;
+ 	 color:fff;
+ 	 left:-5px;
+}
+}
+
+
+@media (max-width: 710px) {
+ .barra{ 
+
+  background:#fff;
+  width:155px;
+  height:42px;
+  border:none;
+  outline:none;
+  padding:0 25px;
+  border-radius:25px 0 0 25px;
+  
+}
+
+.ricercabutton{
+	position:relative;
+	border-radius: 0 25px 25px 0;
+	width:45px;
+ 	 height:42px;
+ 	 border:none;
+ 	 outline:none;
+ 	 cursor:pointer;
+ 	 background:#ffc107;
+ 	 color:fff;
+ 	 left:-5px;
+}
+}
+
+h2{
+	font-style:italic;
+}

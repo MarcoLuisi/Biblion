@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registrazione</title>
+
+<link rel="stylesheet" type="text/css" href="Css/Registration.css">
+
+<script>
+
+function validateForm() {
+	
+	  var cf=document.forms["regForm"]["cf"].value;
+	  var regex = /[A-Za-z]{6}[0-9lmnpqrstuvLMNPQRSTUV]{2}[abcdehlmprstABCDEHLMPRST]{1}[0-9lmnpqrstuvLMNPQRSTUV]{2}[A-Za-z]{1}[0-9lmnpqrstuvLMNPQRSTUV]{3}[A-Za-z]{1}/;
+	 
+	 
+	  
+	  if(!cf.match(regex) || cf.length != 16)
+	  {  
+		  document.getElementById("cfmsg").innerHTML="Codice fiscale non valido"
+		  return false;
+	  }  
+	  
+	  else{
+		  document.getElementById("cfmsg").innerHTML="" 
+	  }
+		  
+	  var nome=document.forms["regForm"]["nome"].value;
+	  var regex1 = /^[A-Za-z]+$/;
+		
+	  if (nome.length==0 || !nome.match(regex1))
+	  {
+		document.getElementById("nomemsg").innerHTML="Nome non valido"
+	    return false;
+	  }
+	  
+	  else{
+		  document.getElementById("nomemsg").innerHTML=""
+		  
+	  }
+	  
+	  var cognome=document.forms["regForm"]["cognome"].value;
+	  var regex2 = /^[a-zA-Z\s]*$/;
+		
+	  if (cognome.length==0 || !cognome.match(regex2))
+	  {
+		document.getElementById("cognomemsg").innerHTML="Cognome non valido"
+	    return false;
+	  }
+	  
+	  else{
+		  document.getElementById("cognomemsg").innerHTML=""
+		  
+	  }
+	  
+	  
+	  var email=document.forms["regForm"]["email"].value;
+	  var regex3 = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
+		
+	  if (!email.match(regex3) || email.length ==0)
+	  {
+		document.getElementById("emailmsg").innerHTML="Email non valida"
+	    return false;
+	  }
+	  
+	  else{
+		  document.getElementById("emailmsg").innerHTML=""
+
+	  }
+	  
+	  var nomeutente=document.forms["regForm"]["nomeutente"].value;
+	  var regex4 =  /^[0-9a-zA-Z]+$/; 
+		
+	  if (!nomeutente.match(regex4) || nomeutente.length==0)
+	  {
+		 
+		 document.getElementById("nomeutentemsg").innerHTML="Nome Utente non valido"
+		 return false;
+	  }
+	  
+	  else{
+		  document.getElementById("nomeutentemsg").innerHTML=""
+		  
+	  }
+		
+	  
+	  var password=document.forms["regForm"]["password"].value;
+	
+	  if (password.length < 8)
+	  {
+		  document.getElementById("passwordmsg").innerHTML="Password non valida"
+	      return false;
+	  }
+	  
+	  else{
+		  document.getElementById("passwordmsg").innerHTML=""
+		 
+	  }
+	  
+	  var indirizzo=document.forms["regForm"]["indirizzo"].value;
+	  var regex6 =  /^[0-9a-zA-Z,]\w{8,60}]+$/; 
+		
+	  if (indirizzo.test(regex6)===false || indirizzo.length==0)
+	  {
+		 document.getElementById("indirizzomsg").innerHTML="Indirizzo non valido"
+	     return false;
+	  } 
+	  
+	  else{
+		  document.getElementById("indirizzomsg").innerHTML=""
+		     
+	  }
+	
+	  alert("Registrazione al sito avvenuta con successo");
+	  return true;
+	
+	  
+}
+
+	
+</script>
+
+
+</head>
+<body style="background: url(Css/img_css/LRbackgroung1.jpg);">
+
+
+<div class="regibox">
+		<h1 style="font-style:italic;">Registrazione</h1>
+		
+		 <form name="regForm" onsubmit="return validateForm()" action="Registrazione" method="post">
+			
+			<input type="text" name ="cf" placeholder="Codice fiscale" class="normal"><br>
+			<div id="cfmsg" style="color:Red;"></div>
+				
+			
+		    <input type="text" name="nome" placeholder="Nome" class="normal"> <br>
+		  	<div id="nomemsg" style="color:Red;"></div>
+			
+			<input type="text" name="cognome" placeholder="Cognome" class="normal"> <br>
+		    <div id="cognomemsg" style="color:Red;"></div>
+			
+
+			<input type="text" name="email" placeholder="Indirizzo Email" class="normal"> <br>
+		    <div id="emailmsg" style="color:Red;"></div>
+			
+			
+		
+		    <input type="text" name="nomeutente" placeholder="Username" class="special"> <br>
+		      <a class="mini">Sono ammessi sia lettere sia numeri </a>
+		     <div id="nomeutentemsg" style="color:Red;"></div>
+			
+			
+			
+			<input type="password" name="password" placeholder="Password" class="special"> <br>
+			<a class="mini">lunghezza minima 8 caratteri</a> 
+		    <div id="passwordmsg" style="color:Red;"></div>
+		    
+		    <input type="text" name="indirizzo" placeholder="Via Manzoni n°15, Milano, Mi, 20099" class="special" value="Via San Gregorio Armeno, Napoli, Na, 80138" class="special"> <br>
+		    <a class="mini">preferibilmente composto da: Via, Città, Provincia e Codice postale </a> 
+		    <div id="indirizzomsg" style="color:Red;"></div>
+		
+		
+		    
+		    <input type="submit" value="Crea il tuo account">	  
+		    
+	
+		</form>
+</div>
+</body>
+</html>
